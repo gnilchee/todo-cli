@@ -3,16 +3,16 @@ package cmd
 import (
 	"log"
 
-	"todo-cli/todo"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"todo-cli/todo"
 )
 
 // clearDoneCmd represents the done command
 var clearDoneCmd = &cobra.Command{
-	Use:     "cleardone",
-	Short:   "Remove all tasks marked done",
-	Run:     clearDoneRun,
+	Use:   "cleardone",
+	Short: "Remove all tasks marked done",
+	Run:   clearDoneRun,
 }
 
 func init() {
@@ -38,4 +38,3 @@ func clearDoneRun(cmd *cobra.Command, args []string) {
 		log.Fatalf("Save items : %v\ns", err)
 	}
 }
-

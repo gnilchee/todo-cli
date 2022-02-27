@@ -6,16 +6,16 @@ import (
 	"sort"
 	"strconv"
 
-	"todo-cli/todo"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"todo-cli/todo"
 )
 
 // undoneCmd represents the done command
 var undoneCmd = &cobra.Command{
-	Use:     "undone [task number]",
-	Short:   "Unmark task as done",
-	Run:     undoneRun,
+	Use:   "undone [task number]",
+	Short: "Unmark task as done",
+	Run:   undoneRun,
 }
 
 func init() {
@@ -45,4 +45,3 @@ func undoneRun(cmd *cobra.Command, args []string) {
 		log.Println(i, "doesnt match any item")
 	}
 }
-

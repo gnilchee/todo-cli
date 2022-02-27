@@ -6,16 +6,16 @@ import (
 	"sort"
 	"strconv"
 
-	"todo-cli/todo"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"todo-cli/todo"
 )
 
 // doneCmd represents the done command
 var doneCmd = &cobra.Command{
-	Use:     "done [task number]",
-	Short:   "Mark task as done",
-	Run:     doneRun,
+	Use:   "done [task number]",
+	Short: "Mark task as done",
+	Run:   doneRun,
 }
 
 func init() {
@@ -45,4 +45,3 @@ func doneRun(cmd *cobra.Command, args []string) {
 		log.Println(i, "doesnt match any item")
 	}
 }
-

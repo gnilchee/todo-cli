@@ -1,12 +1,12 @@
 package cmd
 
 import (
-	"log"
 	"fmt"
+	"log"
 
-	"todo-cli/todo"
-	"github.com/spf13/viper"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
+	"todo-cli/todo"
 )
 
 var priority int
@@ -42,4 +42,3 @@ func addRun(cmd *cobra.Command, args []string) {
 		log.Printf("%v\n", err)
 	}
 }
-

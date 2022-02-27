@@ -7,9 +7,9 @@ import (
 	"sort"
 	"text/tabwriter"
 
-	"todo-cli/todo"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
+	"todo-cli/todo"
 )
 
 // listCmd represents the list command
@@ -38,4 +38,3 @@ func listRun(cmd *cobra.Command, args []string) {
 	}
 	w.Flush()
 }
-
